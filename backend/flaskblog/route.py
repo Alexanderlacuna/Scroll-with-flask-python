@@ -38,7 +38,7 @@ def submitForm():
 
 		db.session.add(new_feedback)
 		db.session.commit()
-		send_mail("alexanderkabua@gmail.com",email)
+		send_mail("email",email)
 
 
 		
