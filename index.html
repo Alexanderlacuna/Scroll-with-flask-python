@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scrolling test</title>
+</head>
+<body>
+
+	<nav>
+
+
+  <a href="#page-1">Home</a>
+  <a href="#page-2">Projects</a>
+  <a href="#page-3">Contact</a>
+</nav>
+<div  class="container">
+  <div id="page-1" class="container-item">
+    <h1>Hi!My name is Alexander Kabua</h1>
+
+    <h4>Am a FullStack web developer and a  great lover of new technologies</h4>
+    <p>
+  </div>
+  <div id="page-2"  class="container-item">
+    
+    <div>
+      <h3>Ecormerce project</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, doloribus.</p>
+        <a href="#" class="git_link">visit </a>
+    </div>
+
+     <div>
+      <h3>News project</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, doloribus.</p>
+        <a href="#" class="git_link">visit </a>
+    </div>
+     <div>
+      <h3>Travel project</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, doloribus.</p>
+
+      <a href="#" class="git_link">visit </a>
+    </div>
+  </div>
+  <div id="page-3" class="container-item">
+    <footer class="control_footer">
+
+
+      <div class="footer_body">
+        <ul>
+        <li>
+          <a href="#">Twitter account</a>
+        </li>
+
+         <li>
+          <a href="#">Facebook account</a>
+        </li>
+
+         <li>
+          <a href="#">whatsapp account</a>
+        </li>
+
+        <li>
+          
+          <a href="#">email alexanderkabua@gmail.com</a>
+        </li>
+      </ul>
+
+
+     <form 
+     name="submit_form"
+
+     class="form_control">
+       
+       <input type="text" name="Email" placeholder="write your email">
+
+       <textarea placeholder="write your feed back here much " name="feedback" rows="5" >
+        
+
+       </textarea>
+
+       <input  class="btn" type="submit" value="submit" name="">
+     </form>
+        
+
+      </div>
+      
+
+
+      <div>
+        
+
+        <p class="last_footer">&copy;2019 alexanderkabua production</p>
+      </div>
+      
+    </footer></div>
+</div >
+
+
+
+	
+</body>
+
+
+<style type="text/css">
+
+  nav{
+    height:63px;
+    background:#333;
+
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:10px;
+    padding:10px;
+
+
+  }
+
+  nav a:hover{
+
+    border-bottom:3px solid coral;
+    font-weight: bolder;
+  }
+
+  nav a{
+    color:#fff;
+    padding:20px;
+
+    transition: 0.3s;
+  }
+	
+
+	a {
+  display: inline-block;
+  width: 50px;
+  text-decoration: none;
+}
+
+
+ .container{
+ 	scroll-behavior: smooth;
+ 	height: 100vh;
+ 	/*margin: 0 auto;*/
+ 	display: block;
+  /*width: 350px;*/
+ 
+  overflow-y: hidden;
+  
+  scroll-behavior: smooth;
+  margin:0 auto;
+  max-width: 1100px;
+
+ }
+
+ .git_link{
+  font-weight: bolder;
+  color:coral;
+
+
+
+ }
+
+ #page-1{
+
+ 	height:100vh;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	text-align: center;
+    flex-direction: column;
+
+ }
+
+  #page-2{
+
+ 	height:100vh;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	text-align: center;
+    flex-direction: row;
+    transition: 3s;
+    /*transform:translateX(-200px);*/
+    padding: 15px;
+
+    /*animation-name: animate_projects;*/
+    animation-duration: 2s;
+
+
+    animation-delay: 1s;
+    /*animation-iteration-count: infinite;*/
+    animation-timing-function: ease-in;
+
+
+ }
+
+ #page-2 div{
+
+  width: 100%;
+
+  border-right: 3px solid #ccc;
+  padding: 10px;
+  /*height: 100%;*/
+ }
+
+
+
+
+  #page-3{
+
+ 	height:50vh;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	text-align: center;
+    flex-direction: column;
+
+    /*background: #C852D6;*/
+    /*height: 100%;*/
+   
+
+ }
+.control_footer{
+  background: #ccc;
+  width:100%;
+  margin-top:30px;
+
+
+
+ }
+
+ .footer_body{
+
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 10px;
+ }
+.control_footer ul{
+
+  margin-right: 20px;
+}
+.control_footer li{
+  list-style-type: none;
+  margin:10px;
+
+}
+
+.control_footer li a{
+
+  color:#333;
+
+   padding-right:15px;
+   display: block;
+
+
+}
+
+.control_footer li a:hover{
+
+  /*color:coral;*/
+  font-weight: bold;
+}
+
+.control_footer li a:active{
+  color:green;
+}
+.control_footer ul {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+}
+
+@media(min-width:600px ){
+  nav a{ 
+
+    margin-left: 30px;
+
+
+  }
+
+  .form_control{
+    display: block;
+  }
+}
+
+@media (max-width: 550px) {
+  .container ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #page-2{
+    flex-direction: column;
+
+
+  }
+
+  #page-2 div{
+    border:none;
+  }
+
+
+
+
+
+
+
+  
+  }
+
+
+/*dealing with the form */
+
+.form_control{
+  display:flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  margin-right:10px;
+
+
+
+
+
+}
+
+input[type="text"]{
+  display: inline-block;
+  padding:10px;
+  margin-bottom: 10px;
+}
+.btn{
+
+  color:#fff;
+  background:#333;
+
+  padding: 20px;
+}
+
+  @keyframes animate_projects{
+
+    from{
+
+      transform: translateX(-200px);
+
+
+    }
+
+
+    to{
+
+      transform:translateX(0);
+
+
+    }
+  }
+  
+}
+</style>
+
+<script type="text/javascript">
+  
+  var btn=document.querySelector(".btn")
+
+  // btn.addEventListener("click",()=>console.log("hello"))
+
+  // console.log(document.body)
+
+  formData=document.submit_form
+
+  formData.addEventListener("submit",(e)=>{
+
+    e.preventDefault()
+
+    email=formData.Email.value.trim()
+
+    feedback=formData.feedback.value.trim()
+
+    if (feedback && email) {
+
+      console.log("Success")
+
+      let payload={
+        feedback,
+        email
+      }
+
+      submit(payload)
+      formData.reset()
+
+
+    }
+
+
+    else{
+      console.log("failed in submission")
+    }
+   
+
+
+    
+  })
+  // console.log(document.submit_form.Email.value)
+
+  // send an ajax requesr
+
+
+  const submit=async(data)=>{
+
+
+
+
+    try{
+
+
+
+    
+    const response= await fetch("http://localhost:5000/api/submitForm",{
+
+      method:"POST",
+
+      headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+
+      body:JSON.stringify(data)
+
+
+    
+    })
+   const payload=await response.json()
+   console.log(payload)
+
+
+
+    }
+
+   catch (err){
+    console.log(err.respomse)
+
+   }
+
+
+
+  // console.log(response.json())
+
+    // const payload=await response.json()
+ 
+
+
+
+  }
+</script>
+</html>
